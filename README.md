@@ -18,7 +18,7 @@ A simple code to send txns using the bitcoind rpc calls.
 
 * Clone this repo:
 ```
-git clone www.github.com/hanchon/bitcoin-abc-tx-sender
+git clone https://github.com/hanchon/bitcoin-abc-tx-sender
 ```
 
 * Install dependencies
@@ -32,13 +32,13 @@ npm install
 node src/main.js
 ```
 
-# Configure the program:
+## Configure the program:
 
 * The function `send25Transactions` can be modified to add more outputs and make the transaction bigger.
 * Right know the program is using 600 wallets and each wallet send 25 transactions. The wallet count can be modified with `totalWallets`
 
 
-# Know errors:
+## Know errors:
 
 Sometimes when starting the program it returns:
 ```
