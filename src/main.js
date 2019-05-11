@@ -14,7 +14,7 @@ const totalWallets = 600;
 const feePerOutput = 600;
 const dustToGenerateASecondOutput = 1000
 
-// Creathe the 600 wallets
+// Create the 600 wallets
 j = 0;
 while (j < totalWallets) {
     wallets.push(new Wallet(seed + j))
@@ -80,7 +80,7 @@ async function send25Transactions(walletIndex) {
     })
 
     // Send the balance to the 600 wallets
-    // Calculate satothis to send
+    // Calculate satoshis to send
     let fees = feePerOutput * totalWallets * 3;
     let balance = bitcore.Unit.fromBTC(amountToSendToMainWallet).toSatoshis();
     balance = balance - fees;
