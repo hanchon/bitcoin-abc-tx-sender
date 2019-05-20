@@ -9,7 +9,9 @@ var port = 24004;
 const rpc = new RPC(cfg.rpcip, cfg.rpcport, cfg.rpcuser, cfg.rpcpassword);
 
 //Start the server
-app.listen(port, async ()=>{
+app.listen(port, ()=>{});
+
+app.get('/', async function (req, res) {
     await rpc.mineBlocks(1);
-    return "A block was mined";
+    res.send('A block was mined');
 });
